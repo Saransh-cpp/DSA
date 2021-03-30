@@ -14,7 +14,7 @@ public class LinearSearch {
         System.out.println("Enter size of array");
         n = scanner.nextInt();
 
-        int[] arr = inputFunction(n);
+        int[] arr = inputFunction(n, "Linear");
         System.out.println(Arrays.toString(arr));
 
         System.out.println("Enter the element to be searched");
@@ -37,9 +37,13 @@ public class LinearSearch {
         return false;
     }
 
-    public static int[] inputFunction(int n) {
+    public static int[] inputFunction(int n, String mode) {
         int[] arr = new int[n];
-        System.out.println("Enter elements of the array");
+        if (mode.equals("Linear")) {
+            System.out.println("Enter elements of the array");
+        } else {
+            System.out.println("Enter elements of a sorted array");
+        }
         for (int i = 0; i < arr.length; i++) {
             arr[i] = scanner.nextInt();
         }
