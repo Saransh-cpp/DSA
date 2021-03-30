@@ -1,6 +1,4 @@
-package com.company.binarySearch;
-
-import com.company.linearSearch.LinearSearch;
+package com.company.arrays.searchInArray.binarySearch;
 
 import java.util.Scanner;
 
