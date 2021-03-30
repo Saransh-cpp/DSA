@@ -1,3 +1,3 @@
 # DSA
 
-Staring my DSA in Java
+Starting my DSA in Java
