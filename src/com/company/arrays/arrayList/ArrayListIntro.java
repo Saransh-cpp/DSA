@@ -1,4 +1,4 @@
-package com.company.arrayList.arrayListIntro;
+package com.company.arrays.arrayList;
 
 import java.util.ArrayList;
 
