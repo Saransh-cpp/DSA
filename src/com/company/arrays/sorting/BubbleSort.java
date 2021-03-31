@@ -1,4 +1,4 @@
-package com.company.sorting;
+package com.company.arrays.sorting;
 
 import com.company.arrays.searchInArray.binarySearch.LinearSearch;
 
