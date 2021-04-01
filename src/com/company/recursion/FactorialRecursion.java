@@ -1,0 +1,10 @@
+package com.company.recursion;
+
+import java.util.Scanner;
+
+public class FactorialRecursion {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+    }
+}
