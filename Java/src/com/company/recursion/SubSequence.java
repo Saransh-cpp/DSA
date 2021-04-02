@@ -2,7 +2,7 @@ package com.company.recursion;
 
 public class SubSequence {
     public static void main(String[] args) {
-        String str = "Hello";
+        String str = "abc";
         subSequence("", str);
     }
 
@@ -17,5 +17,6 @@ public class SubSequence {
 
         subSequence(processed + ch, unprocessed);
         subSequence(processed, unprocessed);
+
     }
 }

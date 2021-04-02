@@ -8,7 +8,7 @@ public class SubSequenceOptimized {
     }
 
     public static void subSequence(StringBuilder processed, StringBuilder unprocessed) {
-        if (unprocessed.length() == 0) {
+        if (unprocessed.isEmpty()) {
             System.out.println(processed);
             return;
         }
@@ -17,7 +17,7 @@ public class SubSequenceOptimized {
         unprocessed.deleteCharAt(0);
 
         subSequence(processed.append(ch), unprocessed);
-        processed.delete(processed.length() - 1, processed.length());
+        processed.deleteCharAt(processed.length() - 1);
 
         subSequence(processed, unprocessed);
         unprocessed.insert(0, ch);
