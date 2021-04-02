@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class ArrayEqualSums {
     public static void main(String[] args) {
-        int[] arr = {1, 2, 3};
+        int[] arr = {1, 2, 3, 1, 2, 3, 4, 4, 2, 2};
 
         ArrayList<Integer> first = new ArrayList<>();
         ArrayList<Integer> second = new ArrayList<>();
@@ -14,9 +14,7 @@ public class ArrayEqualSums {
 
     private static void equalSum(ArrayList<Integer> first, ArrayList<Integer> second, int fsum, int ssum, int[] arr, int index) {
         if (index == arr.length) {
-            if (fsum == ssum) {
-                System.out.println(first + " : " + second);
-            }
+            if (fsum == ssum) System.out.println(first + " : " + second);
             return;
         }
         int element = arr[index];
