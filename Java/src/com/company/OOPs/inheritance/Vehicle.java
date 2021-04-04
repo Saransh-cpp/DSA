@@ -12,7 +12,7 @@ public class Vehicle {
         this.wheels = wheels;
     }
 
-    public static void start () {
+    public void start() {
         System.out.println("Start like a general vehicle");
     }
 }
