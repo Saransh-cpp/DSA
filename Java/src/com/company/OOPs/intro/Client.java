@@ -1,4 +1,4 @@
-package com.company.OOPs;
+package com.company.OOPs.intro;
 
 public class Client {
     public static void main(String[] args) {
