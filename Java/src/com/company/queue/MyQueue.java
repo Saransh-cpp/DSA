@@ -4,7 +4,7 @@ public class MyQueue {
     private int end = -1;
     private int start = -1;
     int[] data;
-    int DEFAULT_SIZE = 10;
+    private final int DEFAULT_SIZE = 10;
 
     MyQueue () {
         data = new int[DEFAULT_SIZE];
@@ -20,10 +20,10 @@ public class MyQueue {
         } else if (start == -1) {
             start = 0;
             end = 0;
-            data[0] = item;
+            this.data[0] = item;
         } else {
             end++;
-            data[end] = item;
+            this.data[end] = item;
         }
     }
 
@@ -33,14 +33,14 @@ public class MyQueue {
             return null;
         } else if (end == 0) {
             end--;
-            return data[start--];
+            return this.data[start--];
         } else {
-            return data[start++];
+            return this.data[start++];
         }
     }
 
     public Integer peek () {
-        return data[start];
+        return this.data[start];
     }
 
     public boolean isEmpty() {
