@@ -16,8 +16,12 @@ public class QueueIntro {
         queue.add(8);
         queue.add(9);
         queue.add(10);
-        queue.add(11);
+//        queue.add(11);
         System.out.println(queue.delete());
+        System.out.println(queue.delete());
+
+        System.out.println(queue.delete());
+
         System.out.println(queue.peek());
         System.out.println(queue);
     }

@@ -32,15 +32,15 @@ public class MyQueue {
             System.out.println("Queue empty");
             return null;
         } else if (end == 0) {
-            start--;
-            return data[end--];
+            end--;
+            return data[start--];
         } else {
-            return data[end--];
+            return data[start++];
         }
     }
 
     public Integer peek () {
-        return data[end];
+        return data[start];
     }
 
     public boolean isEmpty() {
