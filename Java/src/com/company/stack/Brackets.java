@@ -19,16 +19,29 @@ public class Brackets {
         for (int i = 0; i < bracSeq.length(); i++) {
             if (bracSeq.charAt(i) == '{' || bracSeq.charAt(i) == '(' || bracSeq.charAt(i) == '[') {
                 stack.push(bracSeq.charAt(i));
-            } else if (bracSeq.charAt(i) == '}') {
-                return stack.pop() == '{';
-            } else if (bracSeq.charAt(i) == ')') {
-                return stack.pop() == '(';
-            } else if (bracSeq.charAt(i) == ']') {
-                return stack.pop() == '[';
+            } else {
+                char c = findBracket(bracSeq.charAt(i));
+                char ch = stack.pop();
+                if (ch != c) {
+                    return false;
+                }
             }
         }
+
+        if (stack.empty()) {
+            return true;
+        }
+
         return false;
     }
 
-
+    private static char findBracket(char c) {
+        if (c == '}') {
+            return '{';
+        } else if (c == ']') {
+            return '[';
+        } else {
+            return '(';
+        }
+    }
 }
