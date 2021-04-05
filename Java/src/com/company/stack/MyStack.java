@@ -1,8 +1,8 @@
 package com.company.stack;
 
 public class MyStack {
-    private int[] data;
-    private final int DEFAULT_SIZE = 10;
+    protected int[] data;
+    protected final int DEFAULT_SIZE = 10;
     private int top = -1;
 
     public MyStack () {
