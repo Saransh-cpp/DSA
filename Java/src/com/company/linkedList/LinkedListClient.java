@@ -11,7 +11,8 @@ public class LinkedListClient {
         linkedList.show();
         System.out.println(linkedList.deleteAtFirst());
         linkedList.show();
-        System.out.println(linkedList.deleteAtLast());
-        linkedList.show();
+//        System.out.println(linkedList.deleteAtLast());
+//        linkedList.show();
+        System.out.println(linkedList.mid());
     }
 }

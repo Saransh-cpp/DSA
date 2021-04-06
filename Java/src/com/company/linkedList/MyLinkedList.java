@@ -69,6 +69,16 @@ public class MyLinkedList {
         return temp;
     }
 
+    public int mid () {
+        Node slow = head;
+        Node fast = head;
+        while (slow != null && fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        return slow.value;
+    }
+
     public void show () {
         Node node = head;
         while (node != null) {
