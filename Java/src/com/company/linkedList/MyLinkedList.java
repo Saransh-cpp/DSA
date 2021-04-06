@@ -39,12 +39,43 @@ public class MyLinkedList {
         size++;
     }
 
+    public Integer deleteAtFirst () {
+        if (size == 0) {
+            System.out.println("Empty list");
+            return null;
+        }
+        int temp = head.value;
+        head = head.next;
+        size--;
+        if (size == 0) {
+            tail = null;
+        }
+
+        return temp;
+    }
+
+    public Integer deleteAtLast () {
+        if (size <= 1) {
+            return deleteAtFirst();
+        }
+        Node node = head;
+        while (node.next != tail) {
+            node = node.next;
+        }
+        int temp = tail.value;
+        tail = node;
+        tail.next = null;
+        size--;
+        return temp;
+    }
+
     public void show () {
         Node node = head;
         while (node != null) {
             System.out.print(node.value + "->");
             node = node.next;
         }
+        System.out.println();
     }
 
 }

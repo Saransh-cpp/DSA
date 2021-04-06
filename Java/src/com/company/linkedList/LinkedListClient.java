@@ -9,5 +9,9 @@ public class LinkedListClient {
         linkedList.insertAtLast(7);
         linkedList.insertAtFirst(10);
         linkedList.show();
+        System.out.println(linkedList.deleteAtFirst());
+        linkedList.show();
+        System.out.println(linkedList.deleteAtLast());
+        linkedList.show();
     }
 }
