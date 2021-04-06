@@ -4,9 +4,9 @@ public class MyQueue {
     private int end = -1;
     private int start = -1;
     int[] data;
-    private final int DEFAULT_SIZE = 10;
 
     MyQueue () {
+        final int DEFAULT_SIZE = 10;
         data = new int[DEFAULT_SIZE];
     }
 
