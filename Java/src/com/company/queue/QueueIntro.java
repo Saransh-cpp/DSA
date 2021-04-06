@@ -5,7 +5,7 @@ import java.util.Queue;
 
 public class QueueIntro {
     public static void main(String[] args) {
-        OptimizedQueue queue = new OptimizedQueue();
+        CircularQueue queue = new CircularQueue();
         queue.add(1);
         queue.add(2);
         queue.add(3);

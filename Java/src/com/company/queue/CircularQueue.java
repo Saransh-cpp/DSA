@@ -8,14 +8,14 @@ public class CircularQueue {
 
     CircularQueue () {
         data = new int[DEFAULT_SIZE];
-        front = -1;
+        front = 0;
         end = -1;
         size = 0;
     }
 
     CircularQueue (int initialSize) {
         data = new int[initialSize];
-        front = -1;
+        front = 0;
         end = -1;
         size = 0;
     }
@@ -28,6 +28,7 @@ public class CircularQueue {
 
         this.end = (end + 1) % data.length;
         this.data[end] = item;
+        size++;
     }
 
     public Integer delete () {
@@ -35,18 +36,17 @@ public class CircularQueue {
             System.out.println("Queue empty");
             return null;
         }
-
         int temp = data[front];
         this.front = (front + 1) % data.length;
         size--;
         return temp;
     }
 
-    private boolean isFull() {
+    public boolean isFull() {
         return size == data.length;
     }
 
-    private boolean isEmpty() {
+    public boolean isEmpty() {
         return size == 0;
     }
 }
