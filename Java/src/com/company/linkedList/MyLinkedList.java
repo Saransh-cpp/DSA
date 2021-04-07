@@ -79,6 +79,21 @@ public class MyLinkedList {
         return slow.value;
     }
 
+    public boolean cycleDetection () {
+        if (size < 3) {
+            return false;
+        }
+        Node slow = head, fast = head.next.next;
+        while (slow != null && fast != null && fast.next != null) {
+            if (slow == fast) {
+                return true;
+            }
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        return false;
+    }
+
     public void show () {
         Node node = head;
         while (node != null) {

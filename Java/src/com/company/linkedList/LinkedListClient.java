@@ -14,5 +14,6 @@ public class LinkedListClient {
 //        System.out.println(linkedList.deleteAtLast());
 //        linkedList.show();
         System.out.println(linkedList.mid());
+        System.out.println(linkedList.cycleDetection());
     }
 }
