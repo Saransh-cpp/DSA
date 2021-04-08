@@ -20,10 +20,16 @@ public class QueueIntro {
 //        queue.add(11);
         System.out.println(queue.delete());
         System.out.println(queue.isEmpty());
+        queue.add(20);
+        System.out.println(queue.isEmpty());
+        System.out.println(queue.delete());
+        queue.show();
 //        System.out.println(queue.delete());
 //        System.out.println(queue.delete());
 //        System.out.println(queue.delete());
         queue.show();
+        System.out.println(queue.delete());
+
 //        System.out.println(queue.delete());
 
 //        System.out.println(queue.delete());
