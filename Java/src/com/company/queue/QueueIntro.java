@@ -5,7 +5,7 @@ import java.util.Queue;
 
 public class QueueIntro {
     public static void main(String[] args) {
-        CircularQueue queue = new CircularQueue();
+        QueueUsingStackInsertionEff queue = new QueueUsingStackInsertionEff();
         queue.add(1);
         queue.add(2);
         queue.add(3);
@@ -16,12 +16,17 @@ public class QueueIntro {
         queue.add(8);
         queue.add(9);
         queue.add(10);
-        queue.add(11);
+        queue.show();
+//        queue.add(11);
         System.out.println(queue.delete());
         System.out.println(queue.isEmpty());
-        System.out.println(queue.delete());
+//        System.out.println(queue.delete());
+//        System.out.println(queue.delete());
+//        System.out.println(queue.delete());
+        queue.show();
+//        System.out.println(queue.delete());
 
-        System.out.println(queue.delete());
+//        System.out.println(queue.delete());
 
 //        System.out.println(queue.peek());
         System.out.println(queue);
