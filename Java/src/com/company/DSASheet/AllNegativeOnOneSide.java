@@ -3,7 +3,7 @@ package com.company.DSASheet;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class AllNegatievOnOneSide {
+public class AllNegativeOnOneSide {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the array size");
