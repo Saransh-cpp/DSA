@@ -16,7 +16,7 @@ public class ReverseArray {
         }
         System.out.println("Initial array - " + Arrays.toString(arr));
         arr = reverseArray(arr);
-        System.out.println("Initial array - " + Arrays.toString(arr));
+        System.out.println("Reversed array - " + Arrays.toString(arr));
     }
 
     public static int[] reverseArray(int[] arr) {
