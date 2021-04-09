@@ -1,7 +1,6 @@
 package com.company.DSASheet;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class UnionAndIntersectionOfArrays {
@@ -22,8 +21,20 @@ public class UnionAndIntersectionOfArrays {
             arr2[i] = scanner.nextInt();
         }
         ArrayList arrList = intersection(arr, arr2);
-//        arr2 = union(origarr, arr2);
-        System.out.println(arrList);
+        ArrayList unionList = union(arr, arr2);
+        System.out.println("Union - " + unionList);
+        System.out.println("Intersection - " +  arrList);
+    }
+
+    private static ArrayList union(int[] arr, int[] arr2) {
+        ArrayList unionated = new ArrayList();
+        for (int j : arr) {
+            if (!unionated.contains(j)) unionated.add(j);
+        }
+        for (int j : arr2) {
+            if (!unionated.contains(j)) unionated.add(j);
+        }
+        return unionated;
     }
 
     private static ArrayList intersection(int[] arr, int[] arr2) {
