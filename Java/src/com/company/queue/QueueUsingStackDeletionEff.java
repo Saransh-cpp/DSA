@@ -5,6 +5,7 @@ public class QueueUsingStackDeletionEff {
     private final int DEFAULT_SIZE = 10;
     int[] data;
     int[] temp;
+    int tempTop = -1;
 
     QueueUsingStackDeletionEff () {
         this.data = new int[DEFAULT_SIZE];
@@ -22,11 +23,23 @@ public class QueueUsingStackDeletionEff {
             return;
         }
 
-        this.data[++this.top] = item;
-        this.temp = new int[this.data.length];
-        for (int i = this.top; i > -1; i--) {
-            temp[temp.length - 1 - i] = this.data[i];
+        if (top == -1) {
+            this.data[++this.top] = item;
+            return;
         }
+
+
+        this.temp = new int[this.data.length];
+        for (int i = 0; i <= top; i++) {
+            this.temp[++this.tempTop] = this.data[top - i];
+        }
+        this.top = -1;
+        this.data[++this.top] = item;
+
+        for (int i = this.tempTop; i > -1; i--) {
+            this.data[++this.top] = this.temp[i];
+        }
+        this.tempTop = -1;
     }
 
     public Integer delete () {
@@ -34,16 +47,7 @@ public class QueueUsingStackDeletionEff {
             System.out.println("Queue empty");
             return null;
         }
-        int[] temp = new int[this.data.length];
-        for (int i = this.top; i > -1; i--) {
-            temp[temp.length - 1 - i] = this.data[i];
-        }
-        int element = temp[top];
-        this.top--;
-        for (int i = this.top; i > -1; i--) {
-            this.data[this.data.length - i - 2] = temp[i];
-        }
-        return element;
+        return this.data[this.top--];
     }
 
     public void show () {

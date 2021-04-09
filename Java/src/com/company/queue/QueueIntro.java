@@ -5,7 +5,7 @@ import java.util.Queue;
 
 public class QueueIntro {
     public static void main(String[] args) {
-        QueueUsingStackInsertionEff queue = new QueueUsingStackInsertionEff();
+        QueueUsingStackDeletionEff queue = new QueueUsingStackDeletionEff();
         queue.add(1);
         queue.add(2);
         queue.add(3);
@@ -15,7 +15,7 @@ public class QueueIntro {
         queue.add(7);
         queue.add(8);
         queue.add(9);
-        queue.add(10);
+//        queue.add(10);
         queue.show();
 //        queue.add(11);
         System.out.println(queue.delete());
