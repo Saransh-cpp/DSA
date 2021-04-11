@@ -1,36 +1,54 @@
 package com.company.bitManipulation;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class FindNonRepetitiveElementsInArray {
+
+    public static int[] singleNumber(int[] nums)
+    {
+        int sum = 0;
+        for (int num : nums) {
+            sum = sum ^ num;
+        }
+
+        int i = 1;
+        int counter = 1;
+        while (true) {
+            if ((sum & i) == 1) {
+                counter++;
+                break;
+            }
+            i = i<<1;
+            counter++;
+        }
+        int num1 = 0;
+        int num2 = 0;
+        i = 1 << counter;
+        for (int j : nums) {
+            if ((i & j) == 0) {
+                num1 = j ^ num1;
+            } else {
+                num2 = j ^ num2;
+            }
+        }
+
+        int[] sol = {num1, num2};
+        Arrays.sort(sol);
+        return sol;
+
+    }
+
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
-        int t = scanner.nextInt();
-        int[] inputs = new int[t];
-        for (int i = 0; i < t; i++) {
-            inputs[i] = scanner.nextInt();
+        System.out.println("Enter size");
+        int n = scanner.nextInt();
+        int[] arr = new int[n];
+        System.out.println("Enter array");
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = scanner.nextInt();
         }
 
-        int zero = 0;
-        for(int i = 0; i < t; i++) {
-            inputs[i] = inputs[i] ^ (~zero);
-
-        }
-
-        for(int j : inputs) {
-            int count = 0;
-            while (j != 0) {
-                j = j & (j - 1);
-                count++;
-            }
-            System.out.println(count);
-        }
-
-// 		int idx = 0;
-// 		int count = 0;
-
-// 		while (arr[idx] != 0 || idx != arr.length) {
-// 		    arr[idx] = arr
-// 		}
+        System.out.println("Unique elements: " + Arrays.toString(singleNumber(arr)));
     }
 }
