@@ -1,10 +1,9 @@
-package com.company.bitManipulation;
+package com.company.DSASheet;
 
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class FindNonRepetitiveElementsInArray {
-
+public class TwoElementsInArray {
     public static int[] singleNumber(int[] nums)
     {
         int sum = 0;
