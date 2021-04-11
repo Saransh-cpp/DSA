@@ -29,11 +29,15 @@ public class CycleRotationArray {
         }
         arr = temp;
         System.out.println(Arrays.toString(arr));
-        StringBuilder output = new StringBuilder();
-        for (long l : arr) {
-            output.append(l).append(" ");
-        }
-        System.out.println("Output - " + output);
         return arr;
+    }
+
+    public static void rotateGFG(long[] arr)
+    {
+        long x = arr[arr.length-1];
+        int i;
+        for (i = arr.length-1; i > 0; i--)
+            arr[i] = arr[i-1];
+        arr[0] = x;
     }
 }
