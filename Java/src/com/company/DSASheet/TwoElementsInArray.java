@@ -39,6 +39,27 @@ public class TwoElementsInArray {
 
     }
 
+    public static int[] singleNumberOpt (int[] arr) {
+
+        int sum = 0;
+        for (int j :
+                arr) {
+            sum = sum ^ j;
+        }
+        int num2 = sum;
+        sum = sum & (-sum);
+        int num1 = 0;
+        for (int j :
+                arr) {
+            if ((sum & j) == 0) {
+                num1 = num1 ^ j;
+            }
+        }
+        num2 = num2 ^ num1;
+        int[] sol = new int[]{Math.min(num1, num2), Math.max(num1, num2)};
+        return sol;
+    }
+
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter size");
@@ -49,6 +70,6 @@ public class TwoElementsInArray {
             arr[i] = scanner.nextInt();
         }
 
-        System.out.println("Unique elements: " + Arrays.toString(singleNumber(arr)));
+        System.out.println("Unique elements: " + Arrays.toString(singleNumberOpt(arr)));
     }
 }
