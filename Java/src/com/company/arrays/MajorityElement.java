@@ -4,8 +4,33 @@ import java.util.HashMap;
 
 public class MajorityElement {
     public static void main(String[] args) {
-        int[] arr = new int[]{1, 3, 3, 4, 4};
-        System.out.println("Majority element is - " + hashMapApproach(arr));
+        int[] arr = new int[]{3,1,3,3,2};
+        System.out.println("Majority element is - " + mooresApproach(arr) + " " + hashMapApproach(arr));
+    }
+
+    private static int mooresApproach(int[] arr) {
+        int currentElement = arr[0];
+        int currentCount = 1;
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] == currentElement) {
+                currentCount++;
+            } else if (arr[i] != currentElement) {
+                currentCount--;
+            }
+
+            if (currentCount == 0) {
+                currentCount = 1;
+                currentElement = arr[i];
+            }
+        }
+
+        int finalCount = 0;
+        for (int j : arr) {
+            if (j == currentElement) finalCount++;
+        }
+
+        if (finalCount > arr.length / 2) return currentElement;
+        else return -1;
     }
 
     private static int hashMapApproach(int[] arr) {
