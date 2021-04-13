@@ -1,6 +1,5 @@
 package com.company.arrays;
 
-import java.lang.reflect.Array;
 
 public class MaxSumSubArray {
     public static void main(String[] args) {
