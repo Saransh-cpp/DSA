@@ -1,6 +1,6 @@
 package com.company.arrays.sorting;
 
-import com.company.arrays.searchInArray.LinearSearch;
+import com.company.arrays.searchInArray.*;
 
 import java.util.Arrays;
 import java.util.Scanner;

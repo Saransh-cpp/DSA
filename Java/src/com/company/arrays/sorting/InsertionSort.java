@@ -1,6 +1,7 @@
 package com.company.arrays.sorting;
 
-import com.company.arrays.searchInArray.LinearSearch;
+
+import com.company.arrays.searchInArray.*;
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -20,6 +21,12 @@ public class InsertionSort {
     }
 
     public static int[] insertionSort(int[] arr) {
+//        for (int i = 1; i < arr.length; i++) {
+//            for (int j = 0; j < ; j++) {
+//
+//            }
+//
+//        }
         return new int[0];
     }
 }
