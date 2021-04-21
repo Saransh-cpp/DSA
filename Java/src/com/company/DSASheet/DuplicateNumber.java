@@ -9,6 +9,18 @@ public class DuplicateNumber {
         System.out.println(findDuplicateHashMap(a));
     }
 
+    // can be used if the element repeats only once
+    public int findDuplicateXOR(int[] nums) {
+        int res = 0;
+        for (int num : nums) {
+            res ^= num;
+        }
+        for (int i = 1; i <= nums.length - 1; i++) {
+            res ^= i;
+        }
+        return res;
+    }
+
     public static int findDuplicateHashMap(int[] nums) {
         HashMap<Integer, Integer> map = new HashMap<>();
         int res = 0;

@@ -11,7 +11,7 @@ public class SubArrayWithSum0 {
     }
 
     static boolean findsum(int[] arr, int n) {
-        Set<Integer> set = new HashSet<Integer>();
+        Set<Integer> set = new HashSet<>();
         int sum = 0;
         for (int j : arr) {
             sum += j;
