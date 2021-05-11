@@ -32,4 +32,23 @@ public class AllNegativeOnOneSide {
         }
         return arr;
     }
+
+    private static int[] negativeMethod2(int[] arr) {
+        int low = 0;
+        int high = arr.length - 1;
+        while(low < high) {
+            if (arr[high] < 0) {
+                high--;
+            } else if (arr[low] > 0) {
+                low++;
+            } else {
+                int temp = arr[low];
+                arr[low] = arr[high];
+                arr[high] = temp;
+                low++;
+                high--;
+            }
+        }
+        return arr;
+    }
 }
