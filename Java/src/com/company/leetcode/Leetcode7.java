@@ -15,6 +15,7 @@ public class Leetcode7 {
             x /= 10;
             if (newNum > Integer.MAX_VALUE || newNum < Integer.MIN_VALUE) return 0;
 
+
             // }
             // } catch (NumberFormatException e) {
             //     return 0;

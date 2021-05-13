@@ -1,0 +1,11 @@
+package com.company.leetcode;
+
+public class Leetcode172 {
+    public static int trailingZeroes(int n) {
+        int res = 0;
+        for (int i = 5; i <= n; i *= 5) {
+            res += n/i;
+        }
+        return res;
+    }
+}
