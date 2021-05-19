@@ -16,7 +16,7 @@ public class Leetcode88 {
         if (n == 0) return;
 
         int j;
-        Boolean flag = false;
+        boolean flag = false;
         for (int i = 0; i < m; i++) {
             if (nums1[i] > nums2[0]) {
                 int temp = nums1[i];
