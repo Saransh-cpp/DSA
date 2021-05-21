@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class UnionAndIntersectionOfSortedArrays {
+
+//    See "Common Elements" Question to do this without HashMap
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the array size");
